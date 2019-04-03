@@ -1,6 +1,8 @@
 'use strict'
  
 const electron = require('electron');
+const client = require('electron-connect').client;
+
 const {app,Menu,MenuItem  , BrowserWindow} = require('electron');
 const url = require('url');
 const path = require('path');
@@ -26,7 +28,11 @@ function createWindow() {
  
 	mainWindow.on('closed', () => {
 		mainWindow = null;
+		client.quit;
 	});
+	if(client){
+		client.create(mainWindow);
+	}	
 }
  
 let userEditorWindow = null;

@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "hot": "./node_modules/.bin/gulp watch:electron",
     "pack": "electron-packager . jwebClient --win --out dist --arch=x64 --app-version=1.0.0 --electron-version=^4.1.3 --icon=./app/favicon.ico --overwrite"
   },
   "author": "",
@@ -13,6 +14,8 @@
     "electron": "^4.1.3"
   },
   "dependencies": {
+    "electron-connect": "^0.6.3",
+    "gulp": "^4.0.0",
     "lowdb": "^1.0.0"
   }
 }
