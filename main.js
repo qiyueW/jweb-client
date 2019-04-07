@@ -14,15 +14,14 @@ let mainWindow = null;
 //创建登录窗口
 function createWindow() {
   mainWindow =new BrowserWindow({ width: 800, height: 600 })
-  
-	const URL = url.format({
-		pathname: path.join(__dirname, 'app/index.html'),
-		protocol: 'file',
-		slashes: true
-	});
- 
-	mainWindow.loadURL(URL);
- 
+	// const URL = url.format({
+	// 	pathname: path.join(__dirname, 'app/index.html'),
+	// 	protocol: 'file',
+	// 	slashes: true
+	// });
+ // 加载远程URL
+ 	mainWindow.loadURL('http://127.0.0.1:8080/loginUser.jsp')
+	//mainWindow.loadURL(URL);
     //打开开发者工具
 	mainWindow.webContents.openDevTools();
  
