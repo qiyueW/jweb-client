@@ -1,3 +1,6 @@
+安装electron SDK
+npm install --save-dev electron
+
 将用户属性文件 进行打包
 asar pack config.properties config.asar
 
@@ -6,6 +9,13 @@ npm install -g asar
 
 本地简单存储 lowdb数据库的安装
 npm install lowdb --save
+
+打包工具
+npm install electron-packager --save-dev
+或全局安装
+npm install electron-packager -g
+
+
 
 --------------------------------------------------------------------------------------
 使用lowdb
